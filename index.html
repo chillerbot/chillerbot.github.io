@@ -2,64 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>chillerbot</title>
-    <style>
-        body {
-            background-color: #4CAF50;
-        }
-        h1 {
-            color: white;
-            font-size: 48px;
-            text-align: center;
-            margin-top: 50px;
-        }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        button {
-            background-color: white;
-            color: #4CAF50;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
-        button a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
-        .discord-button {
-            display: block;
-            margin-top: 20px;
-            text-align: center;
-        }
-        .discord-button button {
-            background-color: #7289DA;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
-        .discord-button button a {
-            color: white;
-            text-decoration: none;
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="Custom ddnet based teeworlds client chillerbot-ux with warlist" name="description">
+    <title>chillerbot-ux ddnet client</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>chillerbot-ux</h1>
-    <div class="button-container">
-        <button><a href="https://github.com/chillerbot/chillerbot-ux/releases/download/v0.0.7/chillerbot-ux-windows-latest.zip">Download for Windows</a></button>
-        <button><a href="https://github.com/chillerbot/chillerbot-ux/releases/download/v0.0.7/chillerbot-ux-macOS-latest.zip">Download for macOS</a></button>
-        <button><a href="https://github.com/chillerbot/chillerbot-ux/releases/download/v0.0.7/chillerbot-ux-ubuntu-latest.zip">Download for Linux</a></button>
-    </div>
-    <div class="discord-button">
-        <button><a href="https://discord.gg/qQv43hq5nY" target="_blank">chillerbot support discord by Itube / 'SYLEX</a>
-    </div>
+    <div class="all">
+        <div class="wrapper">
+            <div class="content">
+                <div class="padded-content">
+                    <h1>chillerbot-ux</h1>
+                    <p>
+                        A ddnet based client with additional features: <br>
+                        - chat based war list to color names red and green <code>!war (name)</code> <code>!peace (name)</code> <code>!team (name)</code> <code>!delteam (name)</code><br>
+                        - password manager (requires manually editing a text file) <br>
+                        - auto reply to common pings in chat <code>bind h reply_to_last_ping</code> <br>
+                        - change username before touching the finish line <code>cl_finish_rename</code> <br>
+                        For more info and releases visit <a href="https://github.com/chillerbot/chillerbot-ux">github</a>.
+                    </p>
+                    <img src="https://raw.githubusercontent.com/ChillerDragon/cdn/master/chillerbot_warlist_basic.gif" alt="warlist">
+                    <h3>Download v008</h3>
+                    <a href="https://github.com/chillerbot/chillerbot-ux/releases/download/v0.0.8/chillerbot-ux-windows-latest.zip">
+                        Windows
+                    </a><br>
+                    <a href="https://github.com/chillerbot/chillerbot-ux/releases/download/v0.0.8/chillerbot-ux-macOS-latest.zip">
+                        macOS
+                    </a><br>
+                    <a href="https://github.com/chillerbot/chillerbot-ux/releases/download/v0.0.8/chillerbot-ux-ubuntu-latest.zip">
+                        Linux
+                    </a><br>
+                    <h3>Get the source</h3>
+                    <a href="https://github.com/chillerbot/chillerbot-ux">
+                        <img src="img/github.svg" alt="github" style="height: 64px">
+                    </a>
+                    <br>
+                    <a href="https://discord.gg/qQv43hq5nY" target="_blank">
+                            chillerbot support discord by Itube / 'SYLEX
+                    </a>
+                </div> <!-- padded content -->
+                <div class="grass"></div>
+            </div> <!-- content -->
+        </div> <!-- wrapper-->
+        <div class="footer">
+            <div class="small_tree"></div>
+            <div class="bush"></div>
+            <div class="grass"></div>
+        </div>
+    </div> <!-- all -->
 </body>
 </html>
