@@ -1,51 +1,279 @@
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+
+@keyframes glitch {
+    0% {
+        clip-path: inset(71% 0 10% 0);
+        transform: translate(-5px, 5px);
+    }
+    5% {
+        clip-path: inset(29% 0 71% 0);
+        transform: translate(5px, -5px);
+    }
+    10% {
+        clip-path: inset(83% 0 1% 0);
+        transform: translate(-5px, 5px);
+    }
+    15% {
+        clip-path: inset(100% 0 1% 0);
+        transform: translate(5px, -5px);
+    }
+    20% {
+        clip-path: inset(58% 0 43% 0);
+        transform: translate(-5px, 5px);
+    }
+    25% {
+        clip-path: inset(46% 0 34% 0);
+        transform: translate(5px, -5px);
+    }
+    100% {
+        clip-path: inset(100% 0 0% 0);
+        transform: translate(0);
+    }
+}
+
+@keyframes rotate-sun {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 50px 20px rgba(255, 153, 51, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 80px 40px rgba(255, 153, 51, 0.6);
+    }
+}
+
 html, body {
-    background-color: rgb(122, 194, 126);
-    background-image: url("img/sun.png");
-    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    overflow-x: hidden;
+}
+
+.sun-container {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    z-index: -4;
+    animation: pulse-glow 10s infinite ease-in-out;
+    border-radius: 50%;
+}
+
+.sun {
+    width: 100%;
+    height: 100%;
+    animation: rotate-sun 60s linear infinite;
+}
+
+.stars, .twinkling, .clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.stars {
+    background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+    z-index: -3;
+}
+
+.twinkling {
+    background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+    z-index: -2;
+    animation: move-twink-back 200s linear infinite;
+}
+
+.clouds {
+    background: transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
+    z-index: -1;
+    opacity: .4;
+    animation: move-clouds-back 200s linear infinite;
+}
+
+.all {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
 }
 
 .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 
 .content {
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.glitch {
+    position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 #ff00c1;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch 5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+    animation: glitch 1s infinite linear alternate-reverse;
+}
+
+p, ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+code {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.feature-img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
     border-radius: 5px;
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
 }
 
-.padded-content {
-    padding: 20px;
+.btn:hover {
+    background-color: #45a049;
 }
 
-.grass {
-    background-image: url("img/grass.png");
+.download-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.github-link {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.github-icon {
+    height: 64px;
+    transition: transform 0.3s ease;
+}
+
+.github-icon:hover {
+    transform: scale(1.1);
+}
+
+.discord-link {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.footer {
+    position: relative;
+    height: 200px;
+    z-index: 2;
+}
+
+.small_tree, .bush, .grass {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    height: 24px;
-}
-
-.bush {
-    background-image: url("img/bush.png");
-    height: 80px;
-    width: 100%;
-    margin-bottom: -24px;
+    background-repeat: repeat-x;
 }
 
 .small_tree {
-    background-image: url("img/small_tree.png");
     height: 180px;
-    width: 100%;
-    margin-bottom: -80px;
+    background-image: url("img/small_tree.png");
+    z-index: 3;
 }
 
-.all {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.bush {
+    height: 80px;
+    background-image: url("img/bush.png");
+    z-index: 2;
+}
+
+.grass {
+    height: 24px;
+    background-image: url("img/grass.png");
+    z-index: 1;
 }
