@@ -7,44 +7,68 @@
     <meta content="Custom ddnet based teeworlds client chillerbot-ux with warlist" name="description">
     <title>chillerbot-ux ddnet client</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @font-face {
+            font-family: 'Roboto';
+            src: url('fonts/Roboto-Light.woff2') format('woff2'),
+                 url('fonts/Roboto-Light.woff') format('woff');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Roboto';
+            src: url('fonts/Roboto-Regular.woff2') format('woff2'),
+                 url('fonts/Roboto-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Roboto';
+            src: url('fonts/Roboto-Bold.woff2') format('woff2'),
+                 url('fonts/Roboto-Bold.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+        }
+    </style>
 </head>
 <body>
     <div class="all">
+        <header>
+            <img src="img/chillerbot-logo.png" alt="ChillerBot Logo" class="logo">
+        </header>
         <div class="wrapper">
             <div class="content">
                 <div class="padded-content">
-                    <h1>chillerbot-ux</h1>
+                    <h1 class="glitch" data-text="chillerbot-ux">chillerbot-ux</h1>
                     <p>
-                        A ddnet based client with additional features: <br>
-                        - chat based war list to color names red and green <code>!war (name)</code> <code>!peace (name)</code> <code>!team (name)</code> <code>!delteam (name)</code><br>
-                        - password manager (requires manually editing a text file) <br>
-                        - auto reply to common pings in chat <code>bind h reply_to_last_ping</code> <br>
-                        - change username before touching the finish line <code>cl_finish_rename</code> <br>
-                        For more info and releases visit <a href="https://github.com/chillerbot/chillerbot-ux">github</a>.
+                        A ddnet based client with additional features:
                     </p>
-                    <img src="https://raw.githubusercontent.com/ChillerDragon/cdn/master/chillerbot_warlist_basic.gif" alt="warlist">
+                    <ul>
+                        <li>Chat based war list to color names red and green <code>!war (name)</code> <code>!peace (name)</code> <code>!team (name)</code> <code>!delteam (name)</code></li>
+                        <li>Password manager (requires manually editing a text file)</li>
+                        <li>Auto reply to common pings in chat <code>bind h reply_to_last_ping</code></li>
+                        <li>Change username before touching the finish line <code>cl_finish_rename</code></li>
+                    </ul>
+                    <p>For more info and releases visit <a href="https://github.com/chillerbot/chillerbot-ux" class="btn">GitHub</a></p>
+                    <img src="https://raw.githubusercontent.com/ChillerDragon/cdn/master/chillerbot_warlist_basic.gif" alt="warlist" class="feature-img">
                     <h3>Download v008</h3>
-                    <a href="https://github.com/chillerbot/chillerbot-ux/releases/download/v0.0.8/chillerbot-ux-windows-latest.zip">
-                        Windows
-                    </a><br>
-                    <a href="https://github.com/chillerbot/chillerbot-ux/releases/download/v0.0.8/chillerbot-ux-macOS-latest.zip">
-                        macOS
-                    </a><br>
-                    <a href="https://github.com/chillerbot/chillerbot-ux/releases/download/v0.0.8/chillerbot-ux-ubuntu-latest.zip">
-                        Linux
-                    </a><br>
+                    <div class="download-buttons">
+                        <a href="https://github.com/chillerbot/chillerbot-ux/releases/download/v0.0.8/chillerbot-ux-windows-latest.zip" class="btn">Windows</a>
+                        <a href="https://github.com/chillerbot/chillerbot-ux/releases/download/v0.0.8/chillerbot-ux-macOS-latest.zip" class="btn">macOS</a>
+                        <a href="https://github.com/chillerbot/chillerbot-ux/releases/download/v0.0.8/chillerbot-ux-ubuntu-latest.zip" class="btn">Linux</a>
+                    </div>
                     <h3>Get the source</h3>
-                    <a href="https://github.com/chillerbot/chillerbot-ux">
-                        <img src="img/github.svg" alt="github" style="height: 64px">
+                    <a href="https://github.com/chillerbot/chillerbot-ux" class="github-link">
+                        <img src="img/github.svg" alt="github" class="github-icon">
                     </a>
-                    <br>
-                    <a href="https://discord.gg/gruApUbhEF" target="_blank">
-                            chillerbot support discord by Itube / 'SYLEX
-                    </a>
-                </div> <!-- padded content -->
-                <div class="grass"></div>
-            </div> <!-- content -->
-        </div> <!-- wrapper-->
+                    <div class="discord-link">
+                        <a href="https://discord.gg/gruApUbhEF" target="_blank" class="btn">
+                            Join Chillerbot Support Discord
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="footer">
             <div class="small_tree"></div>
             <div class="bush"></div>
