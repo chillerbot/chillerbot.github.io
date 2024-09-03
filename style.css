@@ -60,6 +60,13 @@ body {
     min-height: 100vh;
 }
 
+a {
+    color: #4CAF50;
+}
+a:hover {
+    color: #63cf66;
+}
+
 .all {
     min-height: 100vh;
     display: flex;
