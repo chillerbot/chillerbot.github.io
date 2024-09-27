@@ -20,14 +20,22 @@
                     A ddnet based client with additional features:
                 </p>
                 <ul>
-                    <li>Chat based war list to color names red and green <code>!war (name)</code> <code>!peace (name)</code> <code>!team (name)</code> <code>!delteam (name)</code></li>
+                    <li>
+                            Chat based war list to color names red and green <code>!war (name)</code> <code>!peace (name)</code> <code>!team (name)</code> <code>!delteam (name)</code>
+                            <img src="https://raw.githubusercontent.com/ChillerDragon/cdn/master/chillerbot_warlist_basic.gif" alt="warlist" class="feature-img">
+                    </li>
+                    <li>
+                            Show lines to the closes kill tiles using <code>cl_spike_tracer i[radius]</code>.
+                            So <code>cl_spike_tracer 100</code> draws lines from your tee to all the kill tiles that are less than 100 tiles away.
+                            And <code>cl_spike_tracer_walls 1</code> finds kill tiles even if they are behind walls.
+                            <img src="./img/features/spike_tracer.png" alt="spike tracer" class="feature-img">
+                    </li>
                     <li>Password manager (requires manually editing a text file)</li>
                     <li>Auto reply to common pings in chat <code>bind h reply_to_last_ping</code></li>
                     <li>Change username before touching the finish line <code>cl_finish_rename</code></li>
                     <li>Run console commands when a vote is called. Can be used to run <code>say /save code</code> in ddnet before the map gets changed <code>cl_run_on_vote_start</code></li>
                 </ul>
                 <p>For more info and releases visit <a href="https://github.com/chillerbot/chillerbot-ux">GitHub</a>.</p>
-                <img src="https://raw.githubusercontent.com/ChillerDragon/cdn/master/chillerbot_warlist_basic.gif" alt="warlist" class="feature-img">
                 <h3>Download v008</h3>
                 <div class="download-buttons">
                     <a href="https://github.com/chillerbot/chillerbot-ux/releases/download/v0.0.8/chillerbot-ux-windows-latest.zip" class="btn">Windows</a>
