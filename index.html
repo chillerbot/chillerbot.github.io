@@ -40,9 +40,14 @@
                             This can be useful when you are waiting for help in freeze in a ddrace or gores map. As soon as someone comes and moves you out you get notified.
                             Or it can be used to check that nobody removed you from your farm chair in a city mod.
                     </li>
+                    <li>
+                            <code>cl_no_particles 1</code> does not render damage indicators, spawn and death effects anymore. This can cleanup your viewport and improve fps.
+                            Especially in ddrace servers where every gun hit spawns a lot of damage indicators. Or servers that have a bloody effect.
+                    </li>
                     <li>Password manager (requires manually editing a text file)</li>
                     <li>Auto reply to common pings in chat <code>bind h reply_to_last_ping</code></li>
                     <li>Change username before touching the finish line <code>cl_finish_rename</code></li>
+                    <li>You can automatically switch to the skin of players close to you using <code>cl_skin_stealer 1</code></li>
                     <li>Run console commands when a vote is called. Can be used to run <code>say /save code</code> in ddnet before the map gets changed <code>cl_run_on_vote_start</code></li>
                 </ul>
                 <p>For more info and releases visit <a href="https://github.com/chillerbot/chillerbot-ux">GitHub</a>.</p>
